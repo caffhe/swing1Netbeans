@@ -1,5 +1,6 @@
 package fr.ldnr.herbert.swing1netbeans;
 
+import java.awt.Color;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -25,7 +26,7 @@ public class MyFrame extends JFrame {
 
     private void setUpAndDisplay() {
         JPanel content = new JPanel();
-        JButton jb1 = new JButton("Click me!");
+        JButton jb1 = new MyButton("Click me!", Color.RED);
         jb1.addActionListener((e) -> {
             System.out.println("Coucou");
         });
