@@ -20,6 +20,11 @@ public class Swing1Netbeans {
         // Ajouter le bouton dans le cadre (mauvaise pratique !)
         myWindow.add(jb1);
 
+        // Surveiller le bouton pour répondre à un événement
+        jb1.addActionListener((e) -> {
+            System.out.println("Coucou");
+        });
+
         // Dimensionner le cadre
         myWindow.setSize(200, 200);
         // Faire en sorte que fermer le cadre finisse l'application
