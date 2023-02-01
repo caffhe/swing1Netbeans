@@ -2,7 +2,6 @@ package fr.ldnr.herbert.swing1netbeans;
 
 import java.awt.Color;
 import java.awt.FlowLayout;
-import javax.swing.JButton;
 import javax.swing.JFrame;
 
 /**
