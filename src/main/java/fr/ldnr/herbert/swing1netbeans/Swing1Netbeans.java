@@ -3,8 +3,7 @@
 
 package fr.ldnr.herbert.swing1netbeans;
 
-import javax.swing.JButton;
-import javax.swing.JFrame;
+import java.awt.Color;
 
 /**
  *
@@ -13,23 +12,12 @@ import javax.swing.JFrame;
 public class Swing1Netbeans {
 
     public static void main(String[] args) {
-        // Créer un cadre
-        JFrame myWindow = new JFrame();
-        // Créer un bouton
-        JButton jb1 = new JButton("Click me!");
-        // Ajouter le bouton dans le cadre (mauvaise pratique !)
-        myWindow.add(jb1);
-
-        // Surveiller le bouton pour répondre à un événement
-        jb1.addActionListener((e) -> {
+        MyFrame mf = new MyFrame("Mon bouton", Color.ORANGE);
+        mf.getButton().addActionListener((e) -> {
             System.out.println("Coucou");
         });
+        MyFrame mf1 = new MyFrame("toto", "Un bouton", Color.blue);
+        MyFrame mf2 = new MyFrame("Coucou");
 
-        // Dimensionner le cadre
-        myWindow.setSize(200, 200);
-        // Faire en sorte que fermer le cadre finisse l'application
-        myWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        // Afficher le cadre
-        myWindow.setVisible(true);
     }
 }
